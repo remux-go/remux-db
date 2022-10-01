@@ -14,7 +14,7 @@ type DB struct {
 var dir string
 
 // Create a new database with this function 🔥!
-func newDB(name string, collection string) DB {
+func NewDB(name string, collection string) DB {
 	dir = "./" + name + "/" + collection + ".json"
 	if fileExists(dir) {
 		return DB{name, collection}
